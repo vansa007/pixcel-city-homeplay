@@ -12,6 +12,10 @@
 		39F0A4491F8DAC490094B988 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39F0A4471F8DAC490094B988 /* Main.storyboard */; };
 		39F0A44B1F8DAC490094B988 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39F0A44A1F8DAC490094B988 /* Assets.xcassets */; };
 		39F0A44E1F8DAC490094B988 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39F0A44C1F8DAC490094B988 /* LaunchScreen.storyboard */; };
+		39F0A45A1F8DD2220094B988 /* DroppablePin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F0A4591F8DD2220094B988 /* DroppablePin.swift */; };
+		39F0A45C1F8E08080094B988 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F0A45B1F8E08080094B988 /* PhotoCell.swift */; };
+		39F0A45E1F8E0B030094B988 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F0A45D1F8E0B030094B988 /* Constants.swift */; };
+		39F0A4601F8E1F340094B988 /* PopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F0A45F1F8E1F340094B988 /* PopViewController.swift */; };
 		5A2CA597002E53E4ED017D50 /* Pods_pixcel_city_homeplay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1795BF453C9C00B11583A8C9 /* Pods_pixcel_city_homeplay.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +28,10 @@
 		39F0A44A1F8DAC490094B988 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39F0A44D1F8DAC490094B988 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39F0A44F1F8DAC490094B988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39F0A4591F8DD2220094B988 /* DroppablePin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroppablePin.swift; sourceTree = "<group>"; };
+		39F0A45B1F8E08080094B988 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		39F0A45D1F8E0B030094B988 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		39F0A45F1F8E1F340094B988 /* PopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopViewController.swift; sourceTree = "<group>"; };
 		BF9EB256E980D8A8710FBC3B /* Pods-pixcel-city-homeplay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pixcel-city-homeplay.release.xcconfig"; path = "Pods/Target Support Files/Pods-pixcel-city-homeplay/Pods-pixcel-city-homeplay.release.xcconfig"; sourceTree = "<group>"; };
 		E27EA7DE825C37D8C1C3B3DB /* Pods-pixcel-city-homeplay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pixcel-city-homeplay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pixcel-city-homeplay/Pods-pixcel-city-homeplay.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +94,7 @@
 		39F0A4551F8DAFD80094B988 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				39F0A45F1F8E1F340094B988 /* PopViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -93,6 +102,8 @@
 		39F0A4561F8DAFEF0094B988 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				39F0A4591F8DD2220094B988 /* DroppablePin.swift */,
+				39F0A45B1F8E08080094B988 /* PhotoCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -107,6 +118,7 @@
 		39F0A4581F8DB0100094B988 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				39F0A45D1F8E0B030094B988 /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -251,7 +263,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39F0A45E1F8E0B030094B988 /* Constants.swift in Sources */,
+				39F0A45C1F8E08080094B988 /* PhotoCell.swift in Sources */,
+				39F0A4601F8E1F340094B988 /* PopViewController.swift in Sources */,
 				39F0A4461F8DAC490094B988 /* MapViewController.swift in Sources */,
+				39F0A45A1F8DD2220094B988 /* DroppablePin.swift in Sources */,
 				39F0A4441F8DAC490094B988 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
