@@ -1,0 +1,6 @@
+framework module Pods_pixcel_city_homeplay {
+  umbrella header "Pods-pixcel-city-homeplay-umbrella.h"
+
+  export *
+  module * { export * }
+}

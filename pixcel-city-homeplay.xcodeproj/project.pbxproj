@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		39F0A4441F8DAC490094B988 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F0A4431F8DAC490094B988 /* AppDelegate.swift */; };
-		39F0A4461F8DAC490094B988 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F0A4451F8DAC490094B988 /* ViewController.swift */; };
+		39F0A4461F8DAC490094B988 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F0A4451F8DAC490094B988 /* MapViewController.swift */; };
 		39F0A4491F8DAC490094B988 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39F0A4471F8DAC490094B988 /* Main.storyboard */; };
 		39F0A44B1F8DAC490094B988 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39F0A44A1F8DAC490094B988 /* Assets.xcassets */; };
 		39F0A44E1F8DAC490094B988 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39F0A44C1F8DAC490094B988 /* LaunchScreen.storyboard */; };
+		5A2CA597002E53E4ED017D50 /* Pods_pixcel_city_homeplay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1795BF453C9C00B11583A8C9 /* Pods_pixcel_city_homeplay.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1795BF453C9C00B11583A8C9 /* Pods_pixcel_city_homeplay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pixcel_city_homeplay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39F0A4401F8DAC490094B988 /* pixcel-city-homeplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pixcel-city-homeplay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39F0A4431F8DAC490094B988 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		39F0A4451F8DAC490094B988 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		39F0A4451F8DAC490094B988 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		39F0A4481F8DAC490094B988 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		39F0A44A1F8DAC490094B988 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39F0A44D1F8DAC490094B988 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39F0A44F1F8DAC490094B988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF9EB256E980D8A8710FBC3B /* Pods-pixcel-city-homeplay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pixcel-city-homeplay.release.xcconfig"; path = "Pods/Target Support Files/Pods-pixcel-city-homeplay/Pods-pixcel-city-homeplay.release.xcconfig"; sourceTree = "<group>"; };
+		E27EA7DE825C37D8C1C3B3DB /* Pods-pixcel-city-homeplay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pixcel-city-homeplay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pixcel-city-homeplay/Pods-pixcel-city-homeplay.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A2CA597002E53E4ED017D50 /* Pods_pixcel_city_homeplay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DF5D4BC054531A6A93C5EDD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1795BF453C9C00B11583A8C9 /* Pods_pixcel_city_homeplay.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		39F0A4371F8DAC490094B988 = {
 			isa = PBXGroup;
 			children = (
 				39F0A4421F8DAC490094B988 /* pixcel-city-homeplay */,
 				39F0A4411F8DAC490094B988 /* Products */,
+				94FC8D03BC822B51DDC0DBC7 /* Pods */,
+				0DF5D4BC054531A6A93C5EDD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +69,55 @@
 		39F0A4421F8DAC490094B988 /* pixcel-city-homeplay */ = {
 			isa = PBXGroup;
 			children = (
+				39F0A4581F8DB0100094B988 /* Utilities */,
+				39F0A4571F8DAFF80094B988 /* Extensions */,
+				39F0A4561F8DAFEF0094B988 /* View */,
+				39F0A4551F8DAFD80094B988 /* Controller */,
 				39F0A4431F8DAC490094B988 /* AppDelegate.swift */,
-				39F0A4451F8DAC490094B988 /* ViewController.swift */,
+				39F0A4451F8DAC490094B988 /* MapViewController.swift */,
 				39F0A4471F8DAC490094B988 /* Main.storyboard */,
 				39F0A44A1F8DAC490094B988 /* Assets.xcassets */,
 				39F0A44C1F8DAC490094B988 /* LaunchScreen.storyboard */,
 				39F0A44F1F8DAC490094B988 /* Info.plist */,
 			);
 			path = "pixcel-city-homeplay";
+			sourceTree = "<group>";
+		};
+		39F0A4551F8DAFD80094B988 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		39F0A4561F8DAFEF0094B988 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		39F0A4571F8DAFF80094B988 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		39F0A4581F8DB0100094B988 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		94FC8D03BC822B51DDC0DBC7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E27EA7DE825C37D8C1C3B3DB /* Pods-pixcel-city-homeplay.debug.xcconfig */,
+				BF9EB256E980D8A8710FBC3B /* Pods-pixcel-city-homeplay.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +127,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 39F0A4521F8DAC490094B988 /* Build configuration list for PBXNativeTarget "pixcel-city-homeplay" */;
 			buildPhases = (
+				C2E66625940734579FF5E879 /* [CP] Check Pods Manifest.lock */,
 				39F0A43C1F8DAC490094B988 /* Sources */,
 				39F0A43D1F8DAC490094B988 /* Frameworks */,
 				39F0A43E1F8DAC490094B988 /* Resources */,
+				E9C2EAC2619EECE65B3656B7 /* [CP] Embed Pods Frameworks */,
+				9E25B677ECEED266891D4665 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,12 +190,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9E25B677ECEED266891D4665 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pixcel-city-homeplay/Pods-pixcel-city-homeplay-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2E66625940734579FF5E879 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-pixcel-city-homeplay-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9C2EAC2619EECE65B3656B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-pixcel-city-homeplay/Pods-pixcel-city-homeplay-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pixcel-city-homeplay/Pods-pixcel-city-homeplay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		39F0A43C1F8DAC490094B988 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39F0A4461F8DAC490094B988 /* ViewController.swift in Sources */,
+				39F0A4461F8DAC490094B988 /* MapViewController.swift in Sources */,
 				39F0A4441F8DAC490094B988 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +387,7 @@
 		};
 		39F0A4531F8DAC490094B988 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E27EA7DE825C37D8C1C3B3DB /* Pods-pixcel-city-homeplay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +403,7 @@
 		};
 		39F0A4541F8DAC490094B988 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF9EB256E980D8A8710FBC3B /* Pods-pixcel-city-homeplay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
