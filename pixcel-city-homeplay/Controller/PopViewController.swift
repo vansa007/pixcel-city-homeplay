@@ -30,6 +30,17 @@ class PopViewController: UIViewController, UIGestureRecognizerDelegate {
         view.addGestureRecognizer(doubleTap)
     }
     
+    @IBAction func zoomAction(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        UIView.transition(with: self.popImageView, duration: 0.3, options: .transitionCrossDissolve, animations: {
+            if sender.isSelected {
+                self.popImageView.contentMode = .scaleAspectFit
+            }else {
+                self.popImageView.contentMode = .scaleAspectFill
+            }
+        }, completion: nil)
+    }
+    
     @objc func dismissView() {
         dismiss(animated: true, completion: nil)
     }

@@ -18,6 +18,7 @@ class MapViewController: UIViewController, UIGestureRecognizerDelegate {
     //connection
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var swipeViewHieghtConstant: NSLayoutConstraint!
+    @IBOutlet weak var heightCustomNavigationBar: NSLayoutConstraint!
     @IBOutlet weak var swipeView: UIView!
     
     //visual
@@ -58,6 +59,7 @@ class MapViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     @objc func dropPin(_ sender: UITapGestureRecognizer) {
+        removeNavigationView()
         removePin()
         cancelAllSessions()
         imageArray = []
@@ -136,6 +138,7 @@ class MapViewController: UIViewController, UIGestureRecognizerDelegate {
         cancelAllSessions()
         swipeViewHieghtConstant.constant = 0.0
         UIView.animate(withDuration: 0.35) {
+            self.showNavigationView()
             self.view.layoutIfNeeded()
         }
     }
@@ -159,6 +162,20 @@ class MapViewController: UIViewController, UIGestureRecognizerDelegate {
     func removeSpinner() {
         if spinner != nil {
             spinner?.removeFromSuperview()
+        }
+    }
+    
+    func showNavigationView() {
+        self.heightCustomNavigationBar.constant = 70.0
+        UIView.animate(withDuration: 0.2) {
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    func removeNavigationView() {
+        self.heightCustomNavigationBar.constant = 0.0
+        UIView.animate(withDuration: 0.2) {
+            self.view.layoutIfNeeded()
         }
     }
     
@@ -241,7 +258,8 @@ extension MapViewController: UICollectionViewDelegate, UICollectionViewDataSourc
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as? PhotoCell else { return UICollectionViewCell() }
         let imageFromIndex = imageArray[indexPath.row]
         let imageView = UIImageView(image: imageFromIndex)
-        imageView.contentMode = .scaleAspectFit
+        imageView.clipsToBounds = true
+        imageView.contentMode = .scaleToFill
         cell.addSubview(imageView)
         return cell
     }
