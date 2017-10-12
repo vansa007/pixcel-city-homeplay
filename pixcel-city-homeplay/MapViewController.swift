@@ -76,6 +76,10 @@ class MapViewController: UIViewController, UIGestureRecognizerDelegate {
                         //hide spinner, label, reload collection
                         self.removeSpinner()
                         self.removeProgressLb()
+                        if self.imageURLArray.count <= 0 {
+                            self.processLb?.text = "No photo(s) availble in this location."
+                            self.addProgressLb()
+                        }
                         self.collectionView?.reloadData()
                     }
                 })
@@ -138,7 +142,7 @@ class MapViewController: UIViewController, UIGestureRecognizerDelegate {
     
     func addDoubleTap() {
         let doubleTap = UITapGestureRecognizer(target: self, action: #selector(dropPin))
-        doubleTap.numberOfTapsRequired = 2
+        //doubleTap.numberOfTapsRequired = 3
         doubleTap.delegate = self
         mapView.addGestureRecognizer(doubleTap)
     }
@@ -160,7 +164,7 @@ class MapViewController: UIViewController, UIGestureRecognizerDelegate {
     
     func retrieveURLs(forAnnotation annotation: DroppablePin, handler: @escaping CompletionHandler) {
         imageURLArray = []
-        Alamofire.request(flickrURL(forApiKey: FLICKR_API_KEY, withAnnotation: annotation, andNumberOfPhotos: 40)).responseJSON { (response) in
+        Alamofire.request(flickrURL(forApiKey: FLICKR_API_KEY, withAnnotation: annotation, andNumberOfPhotos: 30)).responseJSON { (response) in
             if response.result.error == nil {
                 guard let json = response.result.value as? Dictionary<String, AnyObject> else { return }
                 let photos = json["photos"] as! Dictionary<String, AnyObject>
@@ -181,7 +185,7 @@ class MapViewController: UIViewController, UIGestureRecognizerDelegate {
                 if response.result.error == nil {
                     guard let image = response.result.value else { return }
                     self.imageArray.append(image)
-                    self.processLb?.text = "\(self.imageArray.count)/40 images downloaded"
+                    self.processLb?.text = "\(self.imageArray.count)/30 images downloaded"
                     if self.imageArray.count == self.imageURLArray.count {
                         handler(true)
                     }
@@ -237,6 +241,7 @@ extension MapViewController: UICollectionViewDelegate, UICollectionViewDataSourc
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as? PhotoCell else { return UICollectionViewCell() }
         let imageFromIndex = imageArray[indexPath.row]
         let imageView = UIImageView(image: imageFromIndex)
+        imageView.contentMode = .scaleAspectFit
         cell.addSubview(imageView)
         return cell
     }

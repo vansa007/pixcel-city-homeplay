@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39C432791F8EFA8300215A4E /* BoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C432781F8EFA8300215A4E /* BoundView.swift */; };
 		39F0A4441F8DAC490094B988 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F0A4431F8DAC490094B988 /* AppDelegate.swift */; };
 		39F0A4461F8DAC490094B988 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F0A4451F8DAC490094B988 /* MapViewController.swift */; };
 		39F0A4491F8DAC490094B988 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39F0A4471F8DAC490094B988 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		1795BF453C9C00B11583A8C9 /* Pods_pixcel_city_homeplay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pixcel_city_homeplay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39C432781F8EFA8300215A4E /* BoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundView.swift; sourceTree = "<group>"; };
 		39F0A4401F8DAC490094B988 /* pixcel-city-homeplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pixcel-city-homeplay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39F0A4431F8DAC490094B988 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39F0A4451F8DAC490094B988 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			children = (
 				39F0A4591F8DD2220094B988 /* DroppablePin.swift */,
 				39F0A45B1F8E08080094B988 /* PhotoCell.swift */,
+				39C432781F8EFA8300215A4E /* BoundView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				39F0A4461F8DAC490094B988 /* MapViewController.swift in Sources */,
 				39F0A45A1F8DD2220094B988 /* DroppablePin.swift in Sources */,
 				39F0A4441F8DAC490094B988 /* AppDelegate.swift in Sources */,
+				39C432791F8EFA8300215A4E /* BoundView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
