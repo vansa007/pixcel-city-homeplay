@@ -6,7 +6,7 @@ target 'pixcel-city-homeplay' do
   use_frameworks!
 
   # Pods for pixcel-city-homeplay
-  pod 'Alamofire', '~>4.4'
-  pod 'AlamofireImage', '~>3.1'
+  pod 'Alamofire'
+  pod 'AlamofireImage'
 
 end
